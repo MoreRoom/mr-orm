@@ -12,7 +12,7 @@ public abstract class Configuration4Init {
      * 驱动名称
      */
     private String driverName;
-    
+
     /**
      * 用户名
      */
@@ -22,6 +22,11 @@ public abstract class Configuration4Init {
      * 密码
      */
     private String password;
+
+    /**
+     * 数据库连接地址
+     */
+    private String url;
 
     /**
      * 其他参数
@@ -58,5 +63,24 @@ public abstract class Configuration4Init {
 
     public void setParamMap(Map<String, String> paramMap) {
         this.paramMap = paramMap;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return "Configuration4Init{" +
+                "driverName='" + driverName + '\'' +
+                ", userId='" + userId + '\'' +
+                ", password='" + password + '\'' +
+                ", url='" + url + '\'' +
+                ", paramMap=" + paramMap +
+                '}';
     }
 }
